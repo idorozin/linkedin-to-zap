@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile To Affinity</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fab fa-linkedin"></i> Profile To Affinity</h1>
+            <div class="subtitle">Send LinkedIn profiles to your CRM</div>
+        </div>
+
+        <div class="content">
+            <div class="form-group">
+                <label for="list">
+                    <i class="fas fa-list"></i>
+                    Choose Affinity List
+                </label>
+                <select id="list">
+                    <option value=":1">🎯 </option>
+                    <option value=":0">🏢 </option>
+                    <option value=":0">👥 </option>
+                    <option value=":0">🤖 </option>
+                    <option value=":0">💰 </option>
+                    <option value="Test">🧪 </option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <i class="fas fa-star"></i>
+                    Rating
+                </label>
+                <div class="rating-container">
+                    <div class="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                        <span class="rating-text" id="ratingText">Click to rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">
+                    <i class="fas fa-sticky-note"></i>
+                    Notes
+                </label>
+                <textarea id="notes" placeholder="Add your notes about this contact..."></textarea>
+            </div>
+
+            <div class="result" id="result">
+                <i class="fas fa-check-circle"></i>
+                <span id="resultText"></span>
+            </div>
+
+            <div class="preview-section" id="previewSection">
+                <h3>
+                    <i class="fas fa-eye"></i>
+                    Data Preview
+                </h3>
+                <div class="preview-data" id="previewData"></div>
+            </div>
+
+            <div class="button-container">
+                <button class="btn btn-secondary" id="previewBtn">
+                    <i class="fas fa-eye"></i>
+                    Preview
+                </button>
+                <button class="btn btn-primary" id="zapier">
+                    <span class="normal-text">
+                        <i class="fas fa-paper-plane"></i>
+                        Send to Zapier
+                    </span>
+                    <span class="loading">
+                        <div class="spinner"></div>
+                        Sending...
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            Made with ❤️ for better LinkedIn workflows
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

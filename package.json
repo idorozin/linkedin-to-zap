@@ -1,0 +1,78 @@
+{
+  "name": "profile-to-affinity",
+  "version": "1.1.0",
+  "description": "A Chrome extension that seamlessly extracts LinkedIn profile data and sends it to Affinity CRM through Zapier integration",
+  "main": "src/popup/popup.js",
+  "scripts": {
+    "build": "node scripts/build-config.js",
+    "build-config": "node scripts/build-config.js",
+    "test": "node tests/profile-extraction.test.js",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:generate": "node tests/generate-expected.js",
+    "lint": "echo 'Consider adding ESLint for code quality'",
+    "package": "npm run build-config && zip -r profile-to-affinity-v1.1.zip . -x '*.git*' 'node_modules/*' '*.DS_Store' 'package*.json' 'docs/*' '.env*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/linkedin-zapier.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "linkedin",
+    "crm",
+    "affinity",
+    "zapier",
+    "sales",
+    "lead-generation",
+    "business-development",
+    "networking",
+    "automation"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/linkedin-zapier/issues"
+  },
+  "homepage": "https://github.com/your-username/linkedin-zapier#readme",
+  "engines": {
+    "chrome": ">=88.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.0.0-beta.3",
+    "jsdom": "^26.1.0"
+  },
+  "extensionInfo": {
+    "manifestVersion": 3,
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "hostPermissions": [
+      "*://www.linkedin.com/*",
+      "*://linkedin.com/*"
+    ],
+    "contentScripts": [
+      "src/content-scripts/content-normal.js",
+      "src/content-scripts/content-sales.js"
+    ],
+    "popup": "src/popup/popup.html",
+    "background": "src/background/background.js"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/popup/popup.js",
+      "!src/background/background.js"
+    ],
+    "coverageDirectory": "coverage",
+    "verbose": true
+  }
+}
