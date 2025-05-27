@@ -17,10 +17,10 @@ A powerful Chrome extension that seamlessly extracts LinkedIn profile data and s
 1. **Download the Extension**
 
    ```bash
-   git clone https://github.com/your-username/linkedin-to-zap.git
+   git clone https://github.com/idorozin/linkedin-to-zap
    cd linkedin-to-zap
    ```
-
+   alternatively download the repo as zip and extract the zip.
 2. **Add your custom web-hook url**
 
    - open the file `/src/config/config.js` with any text editor.
