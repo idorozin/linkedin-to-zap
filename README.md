@@ -38,6 +38,7 @@ A powerful Chrome extension that seamlessly extracts LinkedIn profile data and s
    - The extension icon should appear in your toolbar
 
 ## 🚀 Quick Start
+![image](https://github.com/user-attachments/assets/58e27896-4cfa-45fb-85bf-7e127598c535)
 
 ### 1. **Setup Webhook Integration**
 
@@ -67,5 +68,4 @@ To contribute, email: **[rozin.ido@gmail.com](mailto:rozin.ido@gmail.com)**
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
 **Made with ❤️ for better LinkedIn workflows**
